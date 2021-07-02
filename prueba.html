@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba Juego de azar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/narutomaki.svg" alt="narutomaki" class="icono_header" />
+    </header>
+    <section id="section">
+      <div class="container">
+        <div class="row">
+          <div id="pantallaInicio" class="primerPantalla col-md-12">
+            <h1>NARUTO Match Game</h1>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="jugador1"
+                placeholder="Jugador Nº 1"
+              />
+              <label for="jugador1">Jugador Nº1</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="jugador2"
+                placeholder="Jugador Nº2"
+              />
+              <label for="jugador2">Jugador Nº 2</label>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button class="btn btn-danger" type="button" id="btn_jugar">
+                ¡Probar Suerte!
+              </button>
+            </div>
+            <!-- <h1>Nombre del juego</h1>
+            <label for="jugador1">Jugador 1</label><br />
+            <input type="text" name="" id="jugador1" placeholder="Nombre" />
+            <br />
+            <label for="jugador2">Jugador 2</label><br />
+            <input type="text" name="" id="jugador2" placeholder="Nombre" />
+            <br />
+            <button type="button">Voy a tener suerte</button> -->
+            <!-- Aca van tambien los juegos anteriores. Tienen que estar los nombres de los jugadores y si hago click tengo que volver a ver los resultados de esos players-->
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-modal">
+        <div class="modalCartas modal-close">
+          <button class="close">X</button>
+          <div class="modal-carrousel">
+            <div class="carrouselCartas">
+              <div class="grande">
+                <div class="carta">
+                  <div class="personaje">
+                    <img src="images/Naruto.png" alt="" class="cartaImg" />
+                    <div class="personaje-body">
+                      <h1>Naruto</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolor eveniet ullam, sequi cumque est odit, nihil
+                        laborum quibusdam illum, itaque natus facere quos minima
+                        quae ipsam eligendi aspernatur incidunt asperiores!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carta">
+                  <div class="personaje">
+                    <img src="images/Itachi.jpg" alt="" class="cartaImg" />
+                    <div class="personaje-body">
+                      <h1>Itachi</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolor eveniet ullam, sequi cumque est odit, nihil
+                        laborum quibusdam illum, itaque natus facere quos minima
+                        quae ipsam eligendi aspernatur incidunt asperiores!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carta">
+                  <div class="personaje">
+                    <img src="images/Kakashi.jpg" alt="" class="cartaImg" />
+                    <div class="personaje-body">
+                      <h1>Kakashi</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolor eveniet ullam, sequi cumque est odit, nihil
+                        laborum quibusdam illum, itaque natus facere quos minima
+                        quae ipsam eligendi aspernatur incidunt asperiores!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="puntos">
+                <li class="punto activo"></li>
+                <li class="punto"></li>
+                <li class="punto"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="pantallaAnimacion" class="segundaPantalla">
+      <!--Aca va una animacion de 3 segundos. Se puede hacer con una funcion de JS, como una funcion de delay-->
+    </div>
+    <div id="pantallaCartas" class="tercerPantalla">
+      <h1>Carta 1/3 del jugador</h1>
+      <!--Esta inf deberia estar guardada en un objeto. Cada carta debe ser un objeto y se le asigna random a cada jugador-->
+      <button>Close</button>
+      <img src="" alt="" />
+      <h3>titulo de la carta</h3>
+      <p>informacion de la carta</p>
+      <!--Aca abajo hay que tener un carrousel con las otras 6 opciones de cartas que salieron. Puede ser un swipe de JS.-->
+    </div>
+    <!--Cuando se terminan de ver las cartas o se hace click en el btn close tiene que salir un popup (modal) con dos botones-->
+    <div id="pantallaModal" class="pantallaModal">
+      <!--Modal con dos botones-->
+      <button>Ver resultados</button>
+      <button>Volver a tirar</button>
+    </div>
+    <div id="pantallaResultados" class="pantallaMatch">
+      <h1>Nombre jugador1</h1>
+      <img src="" alt="" /><img src="" alt="" /><img src="" alt="" />
+      <h1>Nombre jugador2</h1>
+      <img src="" alt="" /><img src="" alt="" /><img src="" alt="" />
+      <h1>Match</h1>
+      <h2>Si/No</h2>
+      <button>Guardar</button
+      ><!--Si apreta este boton va a la pantalla de inicio pero le agrega una leyenda que incluya los resultados de los juegos anteriores-->
+      <button>Salir</button
+      ><!--Si apreta este boton va directamente a la pantalla de inicio-->
+    </div>
+
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
